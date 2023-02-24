@@ -14,6 +14,16 @@ local Window = Library:Window("Window Name", Color3.fromRGB(44, 120, 224))
 2.) <Color3> - The color of the window.
 ```
 
+## Creating a Notification
+```lua
+Library:Notification("Notification Name", "Notification Content", "Notification Button")
+```
+```
+1.) <String> - The name of the notification.
+2.) <String> - The content of the notification.
+3.) <String - The name of the notification button.
+```
+
 ## Creating a Tab
 ```lua
 local Tab = Window:Tab("Tab Name")
