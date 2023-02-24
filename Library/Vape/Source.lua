@@ -136,6 +136,10 @@ function lib:Window(text, preset)
 
     MakeDraggable(DragFrame, Main)
 
+    function lib:Destroy()
+        ui:Destroy
+    end
+    
     local Toggled = true
     function lib:Toggle()
         if Toggled == true then
