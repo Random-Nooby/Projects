@@ -1,5 +1,5 @@
 --[[
-This script isn't finish yet because i too lazy so i wont obfuscate it yet.
+This script isn't finish yet because i too lazy so i wont obfuscate it yet so that mean you can have the auto farm code thingy.
 However when this is finish, i will obfuscate it, kekeke.
 ]]
 
