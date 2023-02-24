@@ -135,10 +135,6 @@ function lib:Window(text, preset)
     Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 
     MakeDraggable(DragFrame, Main)
-
-    function lib:Destroy()
-        ui:Destroy
-    end
     
     local Toggled = true
     function lib:Toggle()
