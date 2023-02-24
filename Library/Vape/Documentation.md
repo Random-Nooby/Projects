@@ -137,8 +137,3 @@ Library:ChangePresetColor(Color3.fromRGB(44, 120, 224))
 ```lua
 Library:Toggle()
 ```
-
-## Destroying the Window
-```lua
-Library:Destroy()
-```
