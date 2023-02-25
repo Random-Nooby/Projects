@@ -1,5 +1,12 @@
--- Not mine, kekeke
-local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+--[[
+Not mine, kekeke
+
+Notification:Notify(
+    {Title = "Title", Description = "Description"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80), Time = 5, Type = "default"}
+)
+]]
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Scripts/Free%20Soucre/Nofitication/Module.lua"))()
 
 local Nofitication = {}
 
