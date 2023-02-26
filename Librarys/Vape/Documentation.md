@@ -69,5 +69,5 @@ Library:Toggle()
 
 ## Changing the present color
 ```lua
-Library:ChangePresetColor(Color3.fromRGB(Color3.fromRGB(30, 30, 30))
+Library:ChangePresetColor(Color3.fromRGB(30, 30, 30))
 ```
