@@ -67,12 +67,12 @@ end)
 Tab:Label("Label")
 ```
 
-## Toggling the Window
-```lua
-Library:Toggle()
-```
-
 ## Changing the present color
 ```lua
 Library:ChangePresetColor(Color3.fromRGB(30, 30, 30))
+```
+
+## Toggling the Window
+```lua
+Library:Toggle()
 ```
