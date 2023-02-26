@@ -10,6 +10,11 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Rando
 local Window = Library:Window("Title", Color3.fromRGB(44, 120, 224))
 ```
 
+## Creating a Notification
+```lua
+Library:Notification("Notification", "Content", "Button")
+```
+
 ## Creating a Tab
 ```lua
 local Tab = Window:Tab("Tab")
