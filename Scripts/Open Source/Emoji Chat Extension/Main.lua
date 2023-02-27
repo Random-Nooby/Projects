@@ -1,5 +1,5 @@
 local Emojis = game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Scripts/Open%20Source/Emoji%20Chat%20Extension/Emojis%20Resources.json"))
-local Name, Method, Index = table.unpack(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/Exunys/Emoji-Chat/main/Resources/Games.json"))[tostring(game.PlaceId)] or {"SayMessageRequest", "FireServer", 1})
+local Name, Method, Index = table.unpack(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Scripts/Open%20Source/Emoji%20Chat%20Extension/Games.json"))[tostring(game.PlaceId)] or {"SayMessageRequest", "FireServer", 1})
 
 local function Replace(Message)
 	Message = assert(Message, "[Emoji Chat Extension] - Unexpected error: parameter \"Message\" missing.")
