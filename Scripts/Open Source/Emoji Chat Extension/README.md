@@ -14,6 +14,7 @@ Currently supported games:
 - Arsenal
 
 Orignal Creator: Exunys
+
 Exunys Emoji Chat Extension script: 
 ```lua
 loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/Exunys/Emoji-Chat/main/Resources/Main.lua'))()
