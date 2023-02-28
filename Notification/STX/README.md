@@ -1,4 +1,5 @@
 # STX Notification
+## Script
 ```lua
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Notification/STX/Source/Client.lua"))()
 
