@@ -6,7 +6,8 @@
 ```lua
 game:GetService("StarterGui"):SetCore("SendNotification", {
    Title = "Title", -- The title of the notification.
-   Text = "Content", -- The content of the notification
-   Duration = 5, -- The duration of the notification
+   Text = "Content", -- The content of the notification.
+   Icon = nil, -- The icon of the notification.
+   Duration = 5, -- The duration of the notification.
 })
 ```
