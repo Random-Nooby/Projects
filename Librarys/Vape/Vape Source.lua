@@ -1483,7 +1483,7 @@ function lib:Window(text, preset)
 
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
-        function tabcontent:Textbox(text, disapper, callback)
+        function tabcontent:Textbox(text, default, disapper, callback)
             local Textbox = Instance.new("Frame")
             local TextboxCorner = Instance.new("UICorner")
             local TextboxTitle = Instance.new("TextLabel")
@@ -1529,7 +1529,7 @@ function lib:Window(text, preset)
             TextBox.BackgroundTransparency = 1.000
             TextBox.Size = UDim2.new(0, 100, 0, 23)
             TextBox.Font = Enum.Font.Gotham
-            TextBox.Text = ""
+            TextBox.Text = default
             TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextBox.TextSize = 14.000
 
