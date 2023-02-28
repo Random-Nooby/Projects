@@ -1,5 +1,5 @@
 # Project Nova
-A bad hub, probably one of the worst hub, out there but hey it is keyless!
+A bad hub, probably one of the worst hub out there but hey it is keyless!
 
 ## Loader
 ```lua
