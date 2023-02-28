@@ -9,4 +9,4 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects
 ## Supported Games
 - Arsenal
 
-High end, not recommend for bad device.
+   High end, not recommend for bad device.
