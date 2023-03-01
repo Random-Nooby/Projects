@@ -1,41 +1,40 @@
-local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Librarys/Vape/Vape%20Source.lua"))()
+--// Inits
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Librarys/Vape/Vape%20Source.lua"))()
+local Window = Library:Window("Preview", Color3.fromRGB(44, 120, 224))
 
-local win = lib:Window("PREVIEW",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+--// Tabs
+local Tab = Window:Tab("Tab")
+local Settings = Window:Tab("Settings")
 
-local tab = win:Tab("Tab 1")
-
-tab:Button("Button", function()
-lib:Notification("Notification", "Hello!", "Hi!")
+--// Tab
+Tab:Button("Button", function()
+    Library:Notification("Notification", "Hello!", "Hi!")
+end)
+Tab:Toggle("Toggle",false, function(State)
+    print(State)
 end)
 
-tab:Toggle("Toggle",false, function(t)
-print(t)
+Tab:Slider("Slider", 0, 100, 50, function(Value)
+    print(Value)
 end)
-
-tab:Slider("Slider",0,100,30, function(t)
-print(t)
+Tab:Dropdown("Dropdown", {"Option 1", "Option 2", "Option 3", "Option 4", "Option 5"}, function(Item)
+    print(Item)
 end)
-
-tab:Dropdown("Dropdown",{"Option 1","Option 2","Option 3","Option 4","Option 5"}, function(t)
-print(t)
+Tab:Colorpicker("Colorpicker",Color3.fromRGB(255,0,0), function(Color3)
+    print(Color3)
 end)
-
-tab:Colorpicker("Colorpicker",Color3.fromRGB(255,0,0), function(t)
-print(t)
+Tab:Textbox("Textbox", "Default Stuff", true, function(Text)
+    print(Text)
 end)
-
-tab:Textbox("Textbox",true, function(t)
-print(t)
+Tab:Bind("Bind", Enum.KeyCode.RightShift, function()
+    print("Pressed!")
 end)
+Tab:Label("Label")
 
-tab:Bind("Bind",Enum.KeyCode.RightShift, function()
-print("Pressed!")
+--// Settings
+Settings:Colorpicker("Change UI Color",Color3.fromRGB(44, 120, 224), function(T)
+    Library:ChangePresetColor(Color3.fromRGB(T.R * 255, T.G * 255, T.B * 255))
 end)
-
-tab:Label("Label")
-
-local changeclr = win:Tab("Change UI Color")
-
-changeclr:Colorpicker("Change UI Color",Color3.fromRGB(44, 120, 224), function(t)
-lib:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
+Settings:Bind("UI Toggle", Enum.KeyCode.RightControl, function()
+    Library:Toggle()
 end)
