@@ -152,38 +152,6 @@ do
                     'NAME',
                     'name'
                 },
-                IntroText = {
-                    'IntroText',
-                    'INTROTEXT',
-                    'introText',
-                    'introtext',
-                    'Introtext'
-                },
-                IntroIcon = {
-                    'IntroIcon',
-                    'INTROICON',
-                    'introIcon',
-                    'introicon',
-                    'Introicon'
-                },
-                IntroBlur = {
-                    'IntroBlur',
-                    'Introblur',
-                    'INTROBLUR',
-                    'introBlur',
-                    'introblur',
-                },
-                IntroBlurIntensity = {
-                    'introblurintensity',
-                    'Introblurintensity',
-                    'INTROBLURINTENSITY',
-                    'introBlurintensity',
-                    'IntroBlurintensity',
-                    'introblurIntensity',
-                    'IntroblurIntensity',
-                    'introBlurIntensity',
-                    'IntroBlurIntensity'
-                },
                 Theme = {
                     'Theme',
                     'THEME',
@@ -220,7 +188,7 @@ do
         BreakAllLoops = true
 
         for _, UI in next, CoreGui:GetChildren() do
-            if UI.Name == 'Project Yield' then
+            if UI.Name == 'Visual Command UI Library | .gg/puxxCphTnK' then
                 for _, Item in next, UI.Main:GetChildren() do
                     if Item.Name ~= 'MainCorner' and Item.Name ~= 'MainStroke' then
                         Item:Destroy()
@@ -357,7 +325,7 @@ function Library:CreateWindow(Properties)
     -- // Create Elements
     local Container = Utility:Create('ScreenGui', {
         Parent = CoreGui,
-        Name = 'Project Yield',
+        Name = 'Visual Command UI Library | .gg/puxxCphTnK',
         ResetOnSpawn = false
     }, {
         Utility:Create('Frame', {
@@ -422,54 +390,6 @@ function Library:CreateWindow(Properties)
     if Draggable then
         Utility:EnableDragging(Main, Main)
     end
-
-    -- // Intro
-    MainStroke.Thickness = 0
-    
-    if IntroBlur == true then
-        Utility:Create('BlurEffect', {
-            Name = 'VisualIntroBlur',
-            Parent = Lighting,
-            Size = 0
-        })
-
-        local Blur = Lighting.VisualIntroBlur
-
-        Utility:Tween(Blur, {Size = IntroBlurIntensity}, 1)
-
-    end
-
-    Utility:Tween(Main, {BackgroundTransparency = 1}, 0)
-
-    Utility:Tween(Main, {Size = UDim2.new(0, 1000, 0, 500)}, 0.25)
-    
-
-    Utility:Tween(Main['IntroText'], {TextTransparency = 0}, 0.25)
-
-
-    Utility:Tween(Main['IntroImage'], {ImageTransparency = 0}, 0.25)
-
-
-    Utility:Tween(Main['IntroText'], {TextTransparency = 1}, 0.25)
-
-
-    Utility:Tween(Main['IntroImage'], {ImageTransparency = 1}, 0.25)
-
-
-    if IntroBlur == true then
-        Utility:Tween(Lighting.VisualIntroBlur, {Size = 0}, 1)
-    end
-
-    Main['IntroText']:Destroy()
-    Main['IntroImage']:Destroy()
-
-    if IntroBlur == true then
-        Lighting.VisualIntroBlur:Destroy()
-    end
-
-    Utility:Tween(Main, {Size = UDim2.new(0, 500, 0, 65)}, 0.25)
-    Utility:Tween(Main, {BackgroundTransparency = 0}, 0.25)
-    MainStroke.Thickness = 1
 
     -- // Position
     if Position == 'top' then
@@ -1074,7 +994,6 @@ function Library:CreateWindow(Properties)
                     Missing = Missing .. tostring(Command.Arguments[Index])
                 end
             end
-
 
             if not HoverDebounce then
                 if Main.Position.Y == UDim.new(1, 0) or Main.Position.Y == UDim.new(0, -36) then
