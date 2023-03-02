@@ -1,5 +1,5 @@
 --// Inits
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Librarys/Vape/Vape%20Source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Libraries/Vape/Source.lua"))()
 local Window = Library:Window("Preview", Color3.fromRGB(44, 120, 224))
 
 --// Tabs
