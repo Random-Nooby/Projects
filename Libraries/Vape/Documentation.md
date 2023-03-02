@@ -34,7 +34,14 @@ Tab:Toggle("Toggle", false, function(State)
 end)
 ```
 
-## Creating a Dropdown
+## Creating a Slider
+```lua
+Tab:Slider("Slider", 0, 100, 50, function(Value)
+    print(Value)
+end)
+```
+
+## Creating a Dropdown menu
 ```lua
 Tab:Dropdown("Dropdown", {"Option 1", "Option 2", "Option 3"}, function(Item)
    print(Item)
