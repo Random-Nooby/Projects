@@ -43,7 +43,7 @@ end)
 
 ## Creating a Textbox
 ```lua
-Tab:Textbox("Textbox", false, function(Text)
+Tab:Textbox("Textbox", "Default", false, function(Text)
    print(Text)
 end)
 ```
