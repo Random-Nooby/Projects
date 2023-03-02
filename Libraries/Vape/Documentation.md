@@ -2,7 +2,7 @@
 
 ## Boosting up the library
 ```lua
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Librarys/Vape/Vape%20Source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Libraries/Vape/Source.lua"))()
 ```
 
 ## Creating a Window
