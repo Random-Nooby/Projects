@@ -65,7 +65,7 @@ end)
 ```lua
 local Toggle = Sector.element("Toggle", "Toggle", false, function(v)
     print(v.Toggle)
-"Flag", end)
+end, "Flag")
 ```
 ```
 1.) <String> - The type of the element which in this case is an toggle.
