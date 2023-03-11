@@ -1,6 +1,6 @@
 --// Inits
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Random-Nooby/Projects/main/Libraries/Vape/Source.lua"))()
-local Window = Library:Window("Preview", Color3.fromRGB(44, 120, 224))
+local Window = Library:Window("Preview", Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
 
 --// Tabs
 local Tab = Window:Tab("Tab")
@@ -34,7 +34,4 @@ Tab:Label("Label")
 --// Settings
 Settings:Colorpicker("Change UI Color",Color3.fromRGB(44, 120, 224), function(T)
     Library:ChangePresetColor(Color3.fromRGB(T.R * 255, T.G * 255, T.B * 255))
-end)
-Settings:Bind("UI Toggle", Enum.KeyCode.RightControl, function()
-    Library:Toggle()
 end)
