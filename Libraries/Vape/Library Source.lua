@@ -3,6 +3,8 @@ local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local PresetColor = Color3.fromRGB(44, 120, 224)
+local Mouse = LocalPlayer:GetMouse()
+local CloseBind = Enum.KeyCode.RightControl
 
 local ui = Instance.new("ScreenGui")
 ui.Name = "Vape"
@@ -82,8 +84,9 @@ local function MakeDraggable(topbarobject, object)
     )
 end
 
-function lib:Window(text, preset)
+function lib:Window(text, preset, closebind)
     PresetColor = preset or Color3.fromRGB(44, 120, 224)
+    CloseBind = closebind or Enum.KeyCode.RightControl
     fs = false
     local Main = Instance.new("Frame")
     local TabHold = Instance.new("Frame")
@@ -137,7 +140,8 @@ function lib:Window(text, preset)
     MakeDraggable(DragFrame, Main)
 
     local Toggled = true
-    function lib:Toggle()
+    UserInputService.InputBegan:Connect(function(io, p)
+    if io.KeyCode == CloseBind then
         if Toggled == true then
             Main:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
             Toggled = false
@@ -148,7 +152,7 @@ function lib:Window(text, preset)
             ui.Enabled = true
             Toggled = true
         end
-    end
+    end)
 
     TabFolder.Name = "TabFolder"
     TabFolder.Parent = Main
