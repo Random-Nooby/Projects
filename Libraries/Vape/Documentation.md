@@ -7,7 +7,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Rando
 
 ## Creating a Window
 ```lua
-local Window = Library:Window("Title", Color3.fromRGB(44, 120, 224))
+local Window = Library:Window("Title", Color3.fromRGB(44, 120, 224), Emun.KeyCode.RightControl)
 ```
 
 ## Creating a Notification
@@ -79,7 +79,3 @@ Tab:Label("Label")
 Library:ChangePresetColor(Color3.fromRGB(30, 30, 30))
 ```
 
-## Toggling the UI
-```lua
-Library:Toggle()
-```
